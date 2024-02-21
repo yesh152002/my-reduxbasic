@@ -10,7 +10,7 @@ import App from './App';
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
     case 'INCREMENT':
-      return state + 1;
+      return action.payload + state;
     case 'DECREMENT':
       if (state<=0){
         return state;
