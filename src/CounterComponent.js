@@ -4,8 +4,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 const increment = (pay) => ({
-  type: 'INCREMENT',
-  payload: pay
+  type: 'INCREMENT'
 });
 const decrement=()=>({
     type: 'DECREMENT'
@@ -16,7 +15,7 @@ const CounterComponent = () => {
   const counter = useSelector(state => state.counter);
 
   const handleIncrement = () => {
-    dispatch(increment(20),);
+    dispatch(increment(),);
   };
   const handleDecrement=()=>{
     dispatch(decrement());
